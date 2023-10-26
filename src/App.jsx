@@ -20,7 +20,7 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-
+// Madi
 function App() {
   const [posts, setPosts] = useState([]);
   const [open, setOpen] = useState(false);
@@ -69,7 +69,7 @@ function App() {
     setOpenSignIn(false);
   };
   useEffect(() => {
-    db.collection('posts').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
+    db.collection('posts').orderBy("timestamp", "desc").onSnapshot(snapshot => {
       setPosts(snapshot.docs.map(doc => ({
         id: doc.id,
         post: doc.data(),
